@@ -8,7 +8,7 @@ const Home = () => {
 
   // Fetch survey data from the backend
   useEffect(() => {
-    fetch("/survey")
+    fetch("https://backend-cenv.onrender.com/survey")
       .then(res => res.json())
       .then(data => setSurveyData(data.headlines))
       .catch(err => console.error("Error fetching data:", err));
@@ -16,7 +16,7 @@ const Home = () => {
 
   // Function to handle voting
   const handleVote = (headlineId, topicId, vote) => {
-    fetch("/vote", {
+    fetch("https://backend-cenv.onrender.com/vote", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({ headlineId, topicId, vote })
