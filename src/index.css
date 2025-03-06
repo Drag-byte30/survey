@@ -11,7 +11,8 @@
 .main{
   border: 2px solid black;
   width: 90%;
-  margin-right: 80px;
+  margin-right: auto;
+  margin-left: auto;
   height:auto;
 }
 /* 🌐 Centered Title & Subtitle */
